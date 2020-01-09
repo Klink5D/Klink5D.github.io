@@ -240,7 +240,7 @@ The relative abundance plot, too, measures how percentages rather than absolute 
 
 If you'd like to inspect a taxon's abundance in more detail, you can double click the taxon's color on the legend in order to isolate it.
 
-Exercise: **Knowing what each variable does, generate your own community composition barplots. Choose the variable corresponding to the samples and Rank5 (Order) as the taxonomy rank.**
+Exercise: **Knowing what each variable does, generate your own community composition barplots. Choose the variable corresponding to the samples and Family as the taxonomy rank.**
 
 <details><summary>**Click to see what the plots will look like**</summary><p>
 

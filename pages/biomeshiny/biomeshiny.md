@@ -74,8 +74,9 @@ For this crash course, we'll be using the newly-created BIOM file as our input. 
 + Tick ".biom file with .csv metadata file"
 + Click "Browse" on the search bar labeled "Dataset". Find the BIOM file you created and select it. Its name should be "asvTable.biom"
 + Click "Browse" on the search bar labeled ".csv metadata file (sample variables)" and upload the metadata .csv file, which has the default name "metadata.csv".
++ In "Taxonomy parsing function", select "Greengenes".
 + Click "Update Dataset". This will merge the metadata file's contents with the .biom file, and set the data you uploaded as the working dataset.
-+ Check the ![](./img/phyloseqsummary.png) tab and wait for a few seconds. If you did everything right, you should see two blocks of text, displaying information about the dataset. We'll return to this table later.
++ Check the ![](./img/phyloseqsummary.png) tab and wait. If you did everything right, you  should see two blocks of text, displaying information about the dataset. We'll return to this table later.
 
 <details><summary>An image of the summary</summary><p>
 ![](./img/dataupload2.png)
@@ -237,7 +238,7 @@ The relative abundance plot, too, measures how percentages rather than absolute 
 
 If you'd like to inspect a taxon's abundance in more detail, you can double click the taxon's color on the legend in order to isolate it.
 
-Exercise: **Knowing what each variable does, generate your own community composition barplots. Choose the variable corresponding to the samples and Rank5 (Order) as the taxonomy rank.**
+Exercise: **Knowing what each variable does, generate your own community composition barplots. Choose the variable corresponding to the samples and Family as the taxonomy rank.**
 
 <details><summary>**Click to see what the plots will look like**</summary><p>
 
@@ -633,22 +634,22 @@ Once you've confirmed the dataset is loaded (check for changes in the Phyloseq S
 Question: **Using "nationality" as the variable to cluster samples around, generate a network plot. Can you find any major sample clusters?**
 
 <details><summary>**Click to see answer**</summary><p>
-There are several clusters of samples in the plot. First, a full view of what your network plot might look like, using the Bray-Curtis dissimilarity matrix and "nationality" as both the clustering variable and the point shape variable.
+There are several clusters of samples in the plot, most noticeably a large cluster of AFR samples, which seems to connect most samples of the group. It also appears to have some overlap with a group of AAM samples. This suggests that despite belonging to distinct groups, there are sets of AAM samples that are of a similar composition to AFR samples. 
 
-![](./img/networkplot2.png)
-
-At first glance, the plot shows various clusters, most noticeably a large cluster of AFR samples. However, underneath those samples there appears to be a set of AAM samples. The interactive plot allows us to remove elements of the plot, such as other points, lines and text. Let's remove the sample names and isolate the AFR samples by double-clicking on AFR in the legend, and on the line labeled "(AFR,1)". The plot will look like this:
-
-![](./img/networkplot2.png)
+In addition, there are several other clusters of AAM samples, as well as a few, noticeably smaller AFR sample clusters. By examining this plot, one can make the assertion that AFR samples are likely more similar in composition to eachother than AAM samples.
 
 </p></details>
 
 ### 11. Saving results
 
-Biome-Shiny allows the user to save plots and tables with ease. Tables will be saved in a .csv file format, which will allow the user to access them easily in Microsoft Excel or similar programs.
+Having generated your desired tables and plots, you will now want to save your results for later use. Biome-Shiny allows the user to save plots and tables with ease. Tables will be saved in a .csv file format, which will allow the user to access them in Microsoft Excel and similar programs.
 
 Interactive plots can be saved by clicking the "Download plot as a png" button (it looks like a camera) at the top right of each plot. As for tables, you can save them by clicking the Download button below each plot. 
 
-You can also download an HTML report. The report contains the plots you generated, and the top of each table.
+Exercise: **Test out these functionalities by saving a table and a plot of your choosing, and opening them.**
 
+You can also download an HTML report. The report contains the generated plots, as well as the first lines of each generated table.
 
+### 12. Closing remarks
+
+Biome-Shiny is a tool designed to introduce people to Bioinformatics. It's designed with beginners in mind, and people with little experience with R scripting, to provide them with a set of analyses that are frequently used when exploring a microbial community dataset. By the end of this crash course, you should be able to use the tool to explore your own data. Biome-Shiny is an open-source tool
