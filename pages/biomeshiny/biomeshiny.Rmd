@@ -76,8 +76,9 @@ For this crash course, we'll be using the newly-created BIOM file as our input. 
 + Tick ".biom file with .csv metadata file"
 + Click "Browse" on the search bar labeled "Dataset". Find the BIOM file you created and select it. Its name should be "asvTable.biom"
 + Click "Browse" on the search bar labeled ".csv metadata file (sample variables)" and upload the metadata .csv file, which has the default name "metadata.csv".
++ In "Taxonomy parsing function", select "Greengenes".
 + Click "Update Dataset". This will merge the metadata file's contents with the .biom file, and set the data you uploaded as the working dataset.
-+ Check the ![](./img/phyloseqsummary.png) tab and wait for a few seconds. If you did everything right, you should see two blocks of text, displaying information about the dataset. We'll return to this table later.
++ Check the ![](./img/phyloseqsummary.png) tab and wait. If you did everything right, you  should see two blocks of text, displaying information about the dataset. We'll return to this table later.
 
 <details><summary>An image of the summary</summary><p>
 ![](./img/dataupload2.png)
